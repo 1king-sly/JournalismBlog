@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-
-
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function LoginForm() {
  
@@ -32,6 +31,8 @@ function LoginForm() {
 
         // Redirect the user to a protected page or perform other actions
         // Replace 'protected-page' with the actual URL of the protected page
+        window.location.href = '/login';
+
         console.log('Byrone is a genius')
 
       }else if (response.status === 401) {
@@ -87,10 +88,10 @@ function LoginForm() {
       </div>
       
       
-      <button className='bg-gradient-to-r  from-indigo-500 via-purple-500 to-pink-500 p-2 rounded-3xl text-white mt-2' type="submit">Sign up</button>
+      <button className='bg-gradient-to-r  from-indigo-500 via-purple-500 to-pink-500 p-2 rounded-3xl text-white mt-2' type="submit">Sign In</button>
       <div className='flex w-full justify-between px-2 text-xs'>
         <p>Don't have an account?</p>
-        <p className='text-blue-700 hover:underline cursor-pointer duration-200'>Sign in</p>
+        <Link to='/SignUp'><p className='text-blue-700 hover:underline cursor-pointer duration-200'>Sign Up</p></Link>
       </div>
     </form>
     </div>

@@ -1,5 +1,5 @@
 
-
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 
 function RegistrationForm() {
@@ -26,7 +26,7 @@ function RegistrationForm() {
       if (response.status === 201) {
         // Registration was successful, you can redirect the user to the login page
         // Replace 'login-page' with the actual URL of your login page
-        console.log(response)
+        console.log('Signed up successfully')
         
       } else if (response.status === 400) {
         // Handle errors (e.g., display an error message to the user)
@@ -123,7 +123,7 @@ function RegistrationForm() {
       <button className='bg-gradient-to-r  from-indigo-500 via-purple-500 to-pink-500 p-2 rounded-3xl text-white mt-2' type="submit">Register</button>
       <div className='flex w-full justify-between px-2 text-xs'>
         <p>Already have an account?</p>
-        <p className='text-blue-700 hover:underline cursor-pointer duration-200'>Sign up</p>
+        <Link to='/SignIn'><p className='text-blue-700 hover:underline cursor-pointer duration-200'>Sign In</p></Link>
       </div>
     </form>
     </div>
