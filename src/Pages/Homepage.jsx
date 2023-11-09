@@ -3,8 +3,6 @@ import Category from '../Component/Category'
 import MainNews from '../Component/MainNews'
 import NewsCard from '../Component/NewsCard'
 import Navbar from '../Component/Navbar'
-
-
 function Homepage() {
   const [newsData, setNewsData] = useState([]);
   const [businessData, setBusinessData] = useState([]);
@@ -13,13 +11,13 @@ function Homepage() {
     // Fetch news data from the API
     fetch('https://mmust-jowa.onrender.com/news')
       .then((response) => response.json())
-      .then((data) => setNewsData(data.slice(0, 1)))
+      .then((data) => setNewsData(data.slice(0, 2)))
       .catch((error) => console.error('Error fetching news data:', error));
 
     // Fetch business data from the API
     fetch('https://mmust-jowa.onrender.com/business')
       .then((response) => response.json())
-      .then((data) => setBusinessData(data.slice(0, 2)))
+      .then((data) => setBusinessData(data.slice(0, 1)))
       .catch((error) => console.error('Error fetching business data:', error));
   }, []);
   return (

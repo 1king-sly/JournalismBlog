@@ -7,7 +7,7 @@ function NewsCard (props){
     const author = props.author
     // const slug = props.slug
   return (
-    <div className='bg-gray-200 h-[360px] w-full  rounded-lg p-2 cursor-pointer object-contain'>
+    <div className=' shadow-lg h-[360px] w-full  rounded-lg p-2 cursor-pointer object-contain'>
         <div>
             <img  className='w-full rounded-md h-[189px]' src={image} alt="" />
         </div>
