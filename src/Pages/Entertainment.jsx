@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from '../Component/Navbar'
 
 const Entertainment = () => {
   return (
-    <div>Entertainment</div>
+    <>
+    <div className='relative mb-20'>
+   <Navbar/>
+   </div>
+   </>
   )
 }
 

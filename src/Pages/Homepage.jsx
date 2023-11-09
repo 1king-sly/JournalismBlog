@@ -23,7 +23,7 @@ function Homepage() {
   return (
     
     <>
-        <div className='relative mb-20'>
+    <div className='relative mb-20'>
     <Navbar/>
     </div>
      
