@@ -3,7 +3,7 @@ import Category from '../Component/Category'
 import MainNews from '../Component/MainNews'
 import NewsCard from '../Component/NewsCard'
 import Navbar from '../Component/Navbar'
-
+import Footer from '../Component/Footer'
 
 function Homepage() {
   return (
@@ -34,6 +34,7 @@ function Homepage() {
    <Category category="SPORTS"/>
    <Category category="BUSINESS"/>
    <Category category="ENTERTAINMENT"/>
+    <Footer/>
     </> 
     
   )
