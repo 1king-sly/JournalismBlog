@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Category from '../Component/Category'
 import { Link } from 'react-router-dom';
 
 import MainNews from '../Component/MainNews'
