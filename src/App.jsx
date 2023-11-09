@@ -1,32 +1,35 @@
-import { Component } from 'react';
-import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
-import './App.css'
-import Homepage from './Pages/Homepage.jsx'
-import LoginForm from './Pages/Login.jsx'
-import Admin from './Pages/Admin.jsx'
-import RegistrationForm from './Pages/Signin.jsx';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
 
+// Import your components as needed
+import Homepage from './Pages/Homepage';
+import LoginForm from './Pages/Login';
+import Admin from './Pages/Admin';
+import RegistrationForm from './Pages/Signin';
+import News from './Pages/News';
+import Entertainment from './Pages/Entertainment';
+import Business from './Pages/Business';
+import Sports from './Pages/Sports';
 
-class App extends Component{
-  render(){
-  return (
-    <>
-      {/* <Homepage/> */}
+class App extends React.Component {
+  render() {
+    return (
       <Router>
         <Routes>
-          <Route exact path='/' element={<Homepage/>}></Route>
-            <Route exact path='/Admin' element={<Admin/>}></Route>
-            {/* <Route exact path='/News' element={<News/>}></Route> */}
-            {/* <Route exact path='/Sports' element={<Sports/>}></Route> */}
-            {/* <Route exact path='/Business' element={<Business/>}></Route> */}
-            {/* <Route exact path='/Entertainment' element={<Entertainment/>}></Route> */}
-            <Route exact path='/SignIn' element={<LoginForm/>}></Route>
-            <Route exact path='/SignUp' element={<RegistrationForm/>}></Route>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/Admin" element={<Admin />} />
+          <Route path="/News" element={<News />} />
+          <Route path="/Sports" element={<Sports />} />
+          <Route path="/Business" element={<Business />} />
+          <Route path="/Entertainment" element={<Entertainment />} />
+          <Route path="/SignIn" element={<LoginForm />} />
+          <Route path="/SignUp" element={<RegistrationForm />} />
         </Routes>
       </Router>
-    </>
+    );
+  }
+}
 
-  );
-}
-}
-export default App
+export default App;
+
