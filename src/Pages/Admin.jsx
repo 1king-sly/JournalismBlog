@@ -1,10 +1,30 @@
 import React from 'react'
-
+import Navbar from '../Component/Navbar'
+ 
 function Admin() {
   return (
     <>
+
+
+
+    <div className='grid grid-cols-4 mt-10'>
+      {/* menu section  */}
+      <div className='col-span-4 mb-6'>
+    <Navbar/>
+    </div>
+      <div className='bg-blue-300 w-4/5 h-full   '>
+        <ul className='flex flex-col justify-start items-start text-lg px-20  text-left fixed'>
+          <li className='py-1'>Dashboard</li>
+          <li className='py-1'>Add Blog</li>
+          <li className='py-1'>Profile Settings</li>
+
+        </ul>
+      </div>
     {/* blogdashboard */}
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+     <div className='col-span-3 '>
+     <h5 className='mt-2 text-xl bold font-semibold text-gray-400 -mb-4'>Dashboard</h5>
+
+    <div className="px-2 py-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24  lg:px-8 lg:py-10">
       <div className="grid gap-8 lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full">
      {/* image section  */}
      
@@ -226,22 +246,11 @@ function Admin() {
         </div>
       </div>
       {/* side panel  */}
-      <div>
-      <div className="mt-2 mb-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-            <div className="sm:col-span-4">
-              <label htmlFor="username" className="block mb-1 text-xl bold font-semibold text-gray-400">
-                SEARCH
-              </label>
-              <label class="relative block">
-  <span class="sr-only">Search</span>
-  <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-    <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m19.485 20.154l-6.262-6.262q-.75.639-1.725.989q-.975.35-1.96.35q-2.402 0-4.066-1.663q-1.664-1.664-1.664-4.065T5.47 5.436q1.663-1.667 4.064-1.667q2.402 0 4.068 1.664q1.666 1.664 1.666 4.067q0 1.042-.369 2.017q-.37.975-.97 1.668l6.262 6.261l-.707.708ZM9.538 14.23q1.99 0 3.361-1.37q1.37-1.37 1.37-3.361q0-1.99-1.37-3.36q-1.37-1.37-3.36-1.37q-1.99 0-3.361 1.37q-1.37 1.37-1.37 3.36q0 1.99 1.37 3.36q1.37 1.37 3.36 1.37Z"/></svg> </svg>
-  </span>
-  <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search here..." type="text" name="search"/>
-</label>
-            </div>
-    </div>
-      <ul className='mt-5 '>
+      <div >
+        <div className=''>
+
+        
+      <ul className=''>
         <h5 className='mb-1 text-xl bold font-semibold text-gray-400'>CATEGORIES</h5>
         <li className='text-gray-400 hover:cursor-pointer hover:underline hover:decoration-blue-400'> News  </li><hr className="w-full my-2 border-gray-300" />
         <li className='text-gray-400 hover:cursor-pointer hover:underline hover:decoration-blue-400'>Sports</li><hr className="w-full my-2 border-gray-300" />
@@ -310,8 +319,11 @@ function Admin() {
             </div>
           </div>
           </div>
+
       </ul>
       </div>
+      </div>
+      
       </div>
     </div>
     
@@ -416,8 +428,8 @@ function Admin() {
       </div>
       </div>
     </form>
-
-
+    </div>
+    </div>
 
     </>
   )
