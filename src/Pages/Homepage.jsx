@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import MainNews from '../Component/MainNews'
 import NewsCard from '../Component/NewsCard'
 import Navbar from '../Component/Navbar'
+import Footer from '../Component/Footer'
+
 function Homepage() {
   const [newsData, setNewsData] = useState([]);
   const [latestData, setLatestData] = useState([]);
@@ -116,6 +118,7 @@ function Homepage() {
       <p className=' cursor-pointer hover:text-orange-500 ease-in-out hover:underline duration-150'><Link to="/Sports">VIEW MORE</Link></p>
       
     </div>
+
     <div className='w-full flex'>
       {sportsData.map((item, index) => (
           <NewsCard
@@ -165,6 +168,7 @@ function Homepage() {
    </div>
  
     </div> 
+
     
   )
 }
