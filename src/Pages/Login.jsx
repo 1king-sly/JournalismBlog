@@ -31,7 +31,7 @@ function LoginForm() {
 
         // Redirect the user to a protected page or perform other actions
         // Replace 'protected-page' with the actual URL of the protected page
-        window.location.href = '/login';
+        window.location.href = '/Admin';
 
         console.log('Byrone is a genius')
 

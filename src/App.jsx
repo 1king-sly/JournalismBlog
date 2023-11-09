@@ -23,8 +23,8 @@ class App extends React.Component {
           <Route path="/Sports" element={<Sports />} />
           <Route path="/Business" element={<Business />} />
           <Route path="/Entertainment" element={<Entertainment />} />
-          <Route path="/SignIn" element={<LoginForm />} />
-          <Route path="/SignUp" element={<RegistrationForm />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/signin" element={<RegistrationForm />} />
         </Routes>
       </Router>
     );
