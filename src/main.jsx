@@ -8,9 +8,6 @@ import Homepage from './Pages/Homepage.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     {/* <App />  */}
-     <Homepage/>
-    {/* <LoginForm/> */}
-    {/* <Signin/> */}
+     <App /> 
   </React.StrictMode>,
 )

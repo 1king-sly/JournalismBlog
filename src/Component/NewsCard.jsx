@@ -5,7 +5,7 @@ function NewsCard (props){
     const title = props.title
     const published_on = props.published_on
     const author = props.author
-    const slug = props.slug
+    // const slug = props.slug
   return (
     <div className='bg-gray-200 h-[360px] w-full  rounded-lg p-2 cursor-pointer object-contain'>
         <div>
