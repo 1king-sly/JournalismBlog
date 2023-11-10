@@ -3,7 +3,8 @@ import AdminNavbar from '../Component/AdminNavbar';
 import Dashboard from '../Component/Dashboard';
 import SidePanel from '../Component/SidePanel';
 import AdminSidebar from '../Component/AdminSidebar';
-import CreateBlog from './MyBlog';
+import CreateBlog from './CreateBlog';
+
  
 function Admin() {
 
