@@ -34,7 +34,7 @@ function Homepage() {
     // Fetch news data from the API
     fetch('https://mmust-jowa.onrender.com/news')
       .then((response) => response.json())
-      .then((data) => setNewsData(data.slice(0, 2)))
+      .then((data) => setNewsData(data.slice(1, 3)))
       .catch((error) => console.error('Error fetching news data:', error));
 
     // Fetch business data from the API
@@ -60,8 +60,8 @@ function Homepage() {
           <MainNews
             key={index}
             title={item.title}
-            desc={item.author}
-            // published_on={item.published_on}
+            slug={item.slug}
+            published_on={item.published_on}
             image={item.image_id}
           />
         ))}
@@ -72,7 +72,7 @@ function Homepage() {
           <NewsCard
             key={index}
             title={item.title}
-            author={item.author}
+            slug={item.slug}
             published_on={item.published_on}
             image={item.image_id}
           />
@@ -85,7 +85,7 @@ function Homepage() {
           <NewsCard
           key={index}
           title={item.title}
-          author={item.author}
+          slug={item.slug}
           published_on={item.published_on}
           image={item.image_id}
           />
@@ -106,7 +106,7 @@ function Homepage() {
           <NewsCard
             key={index}
             title={item.title}
-            author={item.author}
+            slug={item.slug}
             published_on={item.published_on}
             image={item.image_id}
           />
@@ -124,7 +124,7 @@ function Homepage() {
           <NewsCard
             key={index}
             title={item.title}
-            author={item.author}
+            slug={item.slug}
             published_on={item.published_on}
             image={item.image_id}
           />
@@ -141,7 +141,7 @@ function Homepage() {
           <NewsCard
             key={index}
             title={item.title}
-            author={item.author}
+            slug={item.slug}
             published_on={item.published_on}
             image={item.image_id}
           />
@@ -158,7 +158,7 @@ function Homepage() {
           <NewsCard
             key={index}
             title={item.title}
-            author={item.author}
+            slug={item.slug}
             published_on={item.published_on}
             image={item.image_id}
           />
