@@ -8,11 +8,8 @@ function Admin() {
   return (
     <div>
 
-    <div className='relative '>
-      <Navbar/>
-    </div >
 
-    <div className='grid grid-cols-4 mt-[80px]'>
+    <div className='grid grid-cols-4 mt-[]'>
       {/* menu section  */}
       <AdminSidebar/>
       
