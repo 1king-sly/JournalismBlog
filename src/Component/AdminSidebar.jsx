@@ -9,7 +9,7 @@ const AdminSidebar = ({ onItemClick }) => {
   return (
     <>
 
-    <div className='bg-blue-300  w-3/5 h-full'>
+    <div className='bg-blue-300  w-full h-full'>
         <ul className='flex flex-col justify-center -ml-5 items-start text-lg px-20 mt-3 text-left fixed'>
            
           <li className='py-1 flex items-center gap-3 cursor-pointer' onClick={() => handleItemClick('Dashboard')}>
@@ -18,7 +18,7 @@ const AdminSidebar = ({ onItemClick }) => {
           <li className='py-1 flex items-center gap-3 cursor-pointer'>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" d="M3.497 15.602a.7.7 0 1 1 0 1.398H.7a.7.7 0 1 1 0-1.398h2.797Zm15.803 0a.7.7 0 1 1 0 1.398H5.529a.7.7 0 1 1 0-1.398H19.3ZM3.497 9.334a.7.7 0 1 1 0 1.399H.7a.7.7 0 1 1 0-1.399h2.797Zm15.803 0a.7.7 0 1 1 0 1.399H5.528a.7.7 0 1 1 0-1.399H19.3ZM3.497 3a.7.7 0 1 1 0 1.398H.7A.7.7 0 1 1 .7 3h2.797ZM19.3 3a.7.7 0 1 1 0 1.398H5.528a.7.7 0 1 1 0-1.398H19.3Z"/></svg>
             Categories</li>
-          <li className='py-1 flex items-center gap-3 cursor-pointer' onClick={() => handleItemClick('Add Blog')}>>
+          <li className='py-1 flex items-center gap-3 cursor-pointer' onClick={() => handleItemClick('Add Blog')}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M8 10.5v-1h7v1H8Zm0 3v-1h7v1H8Zm0 3v-1h7v1H8ZM17.5 8V6h-2V5h2V3h1v2h2v1h-2v2h-1Zm-14 12V4h10.923v1H4.5v14h14V9.077h1V20h-16Z"/></svg>
             Add Blog</li>
           <li className='py-1 flex items-center gap-3 cursor-pointer'>
