@@ -21,6 +21,7 @@ function Admin() {
 
     <div className='flex  mt-[80px] w-screen '>
       {/* menu section  */}
+
       <div className='w-1/6'>
         <AdminSidebar onItemClick={handleSidebarItemClick}/>
       </div>
@@ -38,6 +39,7 @@ function Admin() {
       
             </div>
         </div>
+
       </div>
     </div>
 
