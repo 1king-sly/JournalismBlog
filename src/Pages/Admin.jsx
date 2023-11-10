@@ -26,8 +26,7 @@ function Admin() {
      <Dashboard/>
      
       {/* side panel  */}
-      <SidePanel/>
-      
+  
       </div>
     </div>
     
