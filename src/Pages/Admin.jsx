@@ -13,7 +13,7 @@ function Admin() {
     setSelectedItem(item);
   };
   return (
-    <div>
+    <div className=' overflow-x-hidden'>
 
     <div className='relative '>
       <Navbar/>
