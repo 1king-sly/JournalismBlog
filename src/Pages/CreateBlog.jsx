@@ -255,7 +255,7 @@ const CreateBlog = () => {
           Save
         </button>
       </div>
-    </div>
+   
   </form>
     </>
   );
