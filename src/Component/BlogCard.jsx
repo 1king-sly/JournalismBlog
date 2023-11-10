@@ -3,12 +3,12 @@ import React from 'react'
 function BlogCard  (props)  {
     const title = props.title
     const image = props.image
-    const desc = props.desc
+    const slug = props.slug
     const published_on = props.published_on
     const author = props.author
   return (
     <div>
-        <div className=' shadow-lg h-[360px] w-full  rounded-lg p-2 cursor-pointer object-contain'>
+        <div className=' shadow-lg  w-full  rounded-lg p-2 cursor-pointer object-contain'>
         <div>
             <img  className='w-full rounded-md h-[250px]' src={image} alt="" />
         </div>
@@ -19,7 +19,7 @@ function BlogCard  (props)  {
            
         </div>
         <div className=' font-bold cursor-pointer hover:text-orange-400 ease-in-out duration-150'>{title}</div>
-        <div> {desc} </div>
+        <div className='border-none  px-1 text-black '>{slug}</div>
     </div>
 
     </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const AdminNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
 
-    <div className="w-full text-white flex flex-row bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 justify-between items-center fixed top-0 left-0 mb-10 md:px-20 lg:px-40 max-[768px]:px-10">
+    <div className="w-full text-white flex flex-row bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 justify-between items-center fixed top-0 left-0 mb-10 md:px-20 lg:px-60 max-[768px]:px-10">
       <div className='z-50'>
         <Link to="/">
           <img className="w-20 h-20 object-cover  cursor-pointer" src="/src/images/logo.png" alt="" />
@@ -47,4 +47,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default AdminNavbar;

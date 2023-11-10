@@ -26,7 +26,7 @@ function Sports  () {
           <BlogCard
             key={index}
             title={item.title}
-            author={item.author}
+            slug={item.slug}
             published_on={item.published_on}
             image={item.image_id}
           />
