@@ -165,7 +165,7 @@ const CreateBlog = () => {
             </div>
           </div>
         </div>
-      </div>
+      
       {/* post type  */}
 
       {/* description */}
@@ -255,7 +255,7 @@ const CreateBlog = () => {
           Save
         </button>
       </div>
-    </div>
+      </div>
   </form>
     </>
   );
