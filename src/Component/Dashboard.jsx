@@ -4,7 +4,7 @@ const Dashboard = () => {
   return (
     <>
     {/* statistics */}
-      <div className=" -ml-32 grid gap-10 col-span-3 items-center sm:grid-cols-2 lg:grid-cols-4">
+      <div className=" grid gap-10 col-span-3 items-center sm:grid-cols-2 lg:grid-cols-4">
           
           <div className="grid  justify-between overflow-hidden  text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
             <div className="p-5">
@@ -100,7 +100,7 @@ const Dashboard = () => {
           </div>
         </div>
       
-      <div className='-ml-32  col-span-3 shadow-md bg-white    py-2.5 '>
+      <div className='  col-span-3 shadow-md bg-white    py-2.5 '>
         <ul className='grid border-solid ml-2 grid-cols-4 gap-10'>
           <li>IMAGE</li>
           <li>HEADLINE</li>
@@ -112,7 +112,7 @@ const Dashboard = () => {
         </ul> 
          </div>
 
-        <div className='-ml-32 -mt-7 col-span-3 shadow-md bg-white    py-2.5 '>
+        <div className='  col-span-3 shadow-md bg-white    py-2.5 '>
         <ul className='grid ml-2 grid-cols-4 gap-10'>
           <li>
           <div className="flex items-center justify-start">
@@ -134,7 +134,7 @@ const Dashboard = () => {
          </ul>
            </div>
 
-           <div className='-ml-32 -mt-7 col-span-3 shadow-md bg-white    py-2.5 '>
+           <div className='  col-span-3 shadow-md bg-white    py-2.5 '>
         <ul className='grid ml-2 grid-cols-4 gap-10'>
           <li>
           <div className="flex items-center justify-start">
@@ -156,7 +156,7 @@ const Dashboard = () => {
          </ul>
            </div>
 
-           <div className='-ml-32 -mt-7 col-span-3 shadow-md bg-white    py-2.5 '>
+           <div className='  col-span-3 shadow-md bg-white    py-2.5 '>
         <ul className='grid ml-2 grid-cols-4 gap-10'>
           <li>
           <div className="flex items-center justify-start">
@@ -177,7 +177,7 @@ const Dashboard = () => {
           </ul>
          </ul>
            </div>
-           <div className='-ml-32 -mt-7 col-span-3 shadow-md bg-white    py-2.5 '>
+           <div className=' col-span-3 shadow-md bg-white    py-2.5 '>
         <ul className='grid ml-2 grid-cols-4 gap-10'>
           <li>
           <div className="flex items-center justify-start">
