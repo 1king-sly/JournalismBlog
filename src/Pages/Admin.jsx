@@ -1,5 +1,5 @@
 import React, {  useState } from 'react';
-import Navbar from '../Component/Navbar';
+import AdminNavbar from '../Component/AdminNavbar';
 import Dashboard from '../Component/Dashboard';
 import SidePanel from '../Component/SidePanel';
 import AdminSidebar from '../Component/AdminSidebar';
@@ -14,7 +14,9 @@ function Admin() {
   };
   return (
     <div className=' overflow-x-hidden'>
-
+      <div className='relative'>
+        <AdminNavbar/>
+      </div>
 
     <div className='flex  mt-[80px] w-screen '>
       {/* menu section  */}
