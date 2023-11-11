@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 const CreateBlog = () => {
   const [formData, setFormData] = useState({
     title: '',
@@ -10,25 +9,21 @@ const CreateBlog = () => {
     category: 'News', // Default category
   });
 
-  // const [dataLoaded, setDataLoaded] = useState(false); // New state variable
-
-
   const [filePreview, setFilePreview] = useState(null);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
     // Check user authentication status when the component mounts
     checkUserAuthentication();
-    
   }, []);
 
   const checkUserAuthentication = async () => {
     // Check if the user is authenticated based on your login API
     try {
       const response = await fetch('https://mmust-jowa.onrender.com/api/auth/check', {
+      const response = await fetch('https://mmust-jowa.onrender.com/api/auth/check', {
         method: 'GET',
         headers: {
-
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
         },
@@ -51,7 +46,6 @@ const CreateBlog = () => {
     // Check if the user is authenticated before submitting the blog
     if (!isAuthenticated) {
       console.error('User not authenticated. Unable to create a blog.');
-      window.location.href='/login';
       return;
     }
     const { image_id, ...formDataWithoutFile } = formData;
@@ -72,25 +66,14 @@ const CreateBlog = () => {
       const response = await fetch('https://mmust-jowa.onrender.com/api/createblog', {
         method: 'POST',
         headers: {
-          // 'Access-Control-Allow-Origin':'*',
-          'Content-Type': 'application/json',
-
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5OTcxMTU4MiwianRpIjoiMjE2NzhkMzctYTczYi00OTkzLWFmMmUtYWMyNjU5ZDVkMDBmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjk5NzExNTgyLCJleHAiOjE2OTk3MTI0ODJ9.hsKiRSGu0dCPM5cuYiNIQ72Jz5k_UWrEDcaVF1jf3R4' ,
-
-          
-        },
+          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5OTcxMTU4MiwianRpIjoiMjE2NzhkMzctYTczYi00OTkzLWFmMmUtYWMyNjU5ZDVkMDBmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjk5NzExNTgyLCJleHAiOjE2OTk3MTI0ODJ9.hsKiRSGu0dCPM5cuYiNIQ72Jz5k_UWrEDcaVF1jf3R4' ,        },
         body: JSON.stringify(formDataWithId), // You need to convert your JSON data to FormData
       });
   
       if (response.ok) {
         console.log('Blog post created successfully');
-        // window.location.href = '/Admin';
-
       } else {
         console.error('Failed to create blog post');
-        console.log(response)
-        // window.location.href='/Admin';
-
       }
     } catch (error) {
       console.error('An error occurred:', error);
@@ -111,19 +94,12 @@ const CreateBlog = () => {
       if (data[key] instanceof File) {
         formData.append(key, data[key], data[key].name);
       } else {
-        // Check if the value is an object and not a File
-        if (typeof data[key] === 'object' && data[key] !== null) {
-          // Convert the object to a JSON string
-          formData.append(key, JSON.stringify(data[key]));
-        } else {
-          formData.append(key, data[key]);
-        }
+        formData.append(key, data[key]);
       }
     }
   
     return formData;
   };
-  
   
   
   
@@ -158,9 +134,7 @@ const CreateBlog = () => {
   
 
   if (!isAuthenticated) {
-    // window.location.href = '/login';
-    return null; 
-    
+    return <p>You are not logged in. Please log in to create a blog.</p>;
   }
   
 
@@ -174,7 +148,7 @@ const CreateBlog = () => {
       {/* posttitle  */}
       <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
         <div className="sm:col-span-4">
-          <label htmlFor='title'  className="block mb-2 text-sm bold font-semibold text-gray-400">
+          <label  className="block mb-2 text-sm bold font-semibold text-gray-400">
             PostTitle
           </label>
           <div className="mt-1">
@@ -193,7 +167,7 @@ const CreateBlog = () => {
         </div>
       </div>
         <div className="sm:col-span-4">
-          <label htmlFor='slug'  className="block mb-2 text-sm bold font-semibold text-gray-400">
+          <label  className="block mb-2 text-sm bold font-semibold text-gray-400">
            Slug
           </label>
           <div className="mt-1">
@@ -254,9 +228,9 @@ const CreateBlog = () => {
 
       {/* file uploads */}
       <div className="col-span-full">
-        <p   className="block mb-2 mt-5 text-base text-gray-500">
+        <label  className="block mb-2 mt-5 text-base text-gray-500">
           Cover photo
-        </p>
+        </label>
         <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
           <div className="text-center">
             {filePreview && (
