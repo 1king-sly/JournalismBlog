@@ -14,7 +14,7 @@ function LoginForm() {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://mmust-jowa.onrender.com/api/auth/login', {
+      const response = await fetch('https://39b0-197-248-176-94.ngrok-free.app/api/auth/login', {
         method: 'POST',
         headers:
         {"Content-Type": "application/json"},
@@ -24,6 +24,8 @@ function LoginForm() {
       if (response.status === 200) {
         // Login was successful
         const data = await response.json();
+
+        console.log('Response', data);
         const accessToken = data.access_token;
 
         // Store the access token in local storage (you can also use cookies)
@@ -33,7 +35,7 @@ function LoginForm() {
         // Replace 'protected-page' with the actual URL of the protected page
         window.location.href = '/Admin';
 
-        console.log('Byrone is a genius')
+        console.log(accessToken)
 
       }else if (response.status === 401) {
         // Handle authentication failure (e.g., display an error message)
