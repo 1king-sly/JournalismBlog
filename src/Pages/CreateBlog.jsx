@@ -18,9 +18,8 @@ const CreateBlog = () => {
   }, []);
 
   const checkUserAuthentication = async () => {
-    // Check if the user is authenticated based on your login API
     try {
-      const response = await fetch('https://mmust-jowa.onrender.com/api/auth/check', {
+      // Check if the user is authenticated based on the API response
       const response = await fetch('https://mmust-jowa.onrender.com/api/auth/check', {
         method: 'GET',
         headers: {
@@ -28,7 +27,7 @@ const CreateBlog = () => {
           'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
         },
       });
-
+  
       if (response.ok) {
         setIsAuthenticated(true);
       } else {
@@ -39,6 +38,7 @@ const CreateBlog = () => {
       setIsAuthenticated(false);
     }
   };
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
