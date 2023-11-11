@@ -12,6 +12,7 @@ import News from './Pages/News';
 import Entertainment from './Pages/Entertainment';
 import Business from './Pages/Business';
 import Sports from './Pages/Sports';
+import Blog from './Pages/Blog';
 
 class App extends React.Component {
   render() {
@@ -26,6 +27,7 @@ class App extends React.Component {
           <Route path="/Entertainment" element={<Entertainment />} />
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signin" element={<RegistrationForm />} />
+          <Route path="/Blog" element={<Blog />} />
         </Routes>
       </Router>
     );

@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar from '../Component/Navbar';
 
 function Blog() {
   return (
     <div>
+        <Navbar/>
  <div class=" overflow-hidden bg-white px-6 py-24 sm:py-32  lg:px-0">
  <div class="mx-auto max-w-2xl selection:gap-x-8 gap-y-16 lg:mx-auto lg:max-w-none lg:gap-y-10">
     <div class="lg:row-start-1 lg:mx-auto  lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8">
@@ -26,7 +28,7 @@ function Blog() {
         </div>
       </div>
     </div>
-    <div class="m-12 mx-40 lg:sticky lg:top-4 lg:overflow-hidden">
+    <div class="m-12 mx-40 lg:top-4 lg:overflow-hidden">
       <img class="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]" src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png" alt=""/>
     </div>
     <div class="lg:row-start-2 lg:mx-auto lg:w-full lg:max-w-7xl lg:gap-x-8 lg:px-8">
