@@ -55,10 +55,12 @@ const CreateBlog = () => {
       return;
     }
     const { image_id, ...formDataWithoutFile } = formData;
-    const token = ""
+    
 
   
     try {
+
+      
       const response = await fetch('https://39b0-197-248-176-94.ngrok-free.app/api/v1/createblog', {
         method: 'POST',
         headers: {

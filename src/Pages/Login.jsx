@@ -24,8 +24,6 @@ function LoginForm() {
       if (response.status === 200) {
         // Login was successful
         const data = await response.json();
-
-        console.log('Response', data);
         const accessToken = data.access_token;
 
         // Store the access token in local storage (you can also use cookies)
@@ -35,7 +33,7 @@ function LoginForm() {
         // Replace 'protected-page' with the actual URL of the protected page
         window.location.href = '/Admin';
 
-        console.log(accessToken)
+        console.log('Byrone is a genius')
 
       }else if (response.status === 401) {
         // Handle authentication failure (e.g., display an error message)
