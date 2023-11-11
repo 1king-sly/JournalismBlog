@@ -13,13 +13,13 @@ function Sports  () {
       .catch((error) => console.error('Error fetching news data:', error));
   }, []);
   return (
-    <>
+    <div className='overflow-x-hidden'>
      <div className='relative mb-24'>
       <Navbar/>
     </div>
-    <h1 className='w-screen mt-20 flex text-2xl font-bold  justify-center'>Sports</h1>
+    <h1 className='w-screen mt-20 flex text-2xl font-bold  justify-center '>Sports</h1>
 
-    <div className='w-9/12 mx-auto mt-4 grid grid-cols-2 gap-2 max-[475px]:grid-cols-1 max-[475px]:w-11/12 '>
+    <div className='w-9/12 mx-auto mt-4 grid grid-cols-2 gap-2 max-[475px]:grid-cols-1 max-[475px]:w-11/12 overflow-x-hidden '>
     
       
       {newsData.map((item, index) => (
@@ -33,7 +33,7 @@ function Sports  () {
         ))}
         
     </div>
-    </>
+    </div>
   
   )
 }
