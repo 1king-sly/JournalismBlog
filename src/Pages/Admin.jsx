@@ -4,6 +4,7 @@ import Dashboard from '../Component/Dashboard';
 import SidePanel from '../Component/SidePanel';
 import AdminSidebar from '../Component/AdminSidebar';
 import CreateBlog from './CreateBlog';
+import ProfilePage from '../Component/ProfilePage.jsx'
 
  
 function Admin() {
@@ -18,6 +19,7 @@ function Admin() {
       <div className='relative'>
         <AdminNavbar/>
       </div>
+      
 
     <div className='flex  mt-[80px] w-screen '>
       {/* menu section  */}
@@ -42,7 +44,7 @@ function Admin() {
 
       </div>
     </div>
-
+    <ProfilePage/>
     </div>
   )
 }

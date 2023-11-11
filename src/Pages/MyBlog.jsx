@@ -1,8 +1,8 @@
 import React from 'react'
-
 const CreateBlog = () => {
   return (
     <>
+
     <div className='grid grid-cols-3 gap-9'>
      {/* create new blog */}
      <form action="" className='mt-2 col-span-2' >
