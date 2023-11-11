@@ -113,7 +113,7 @@ const Dashboard = () => {
          </div>
 
         <div className='  col-span-3 shadow-md bg-white    py-2.5 '>
-        <ul className='grid ml-2 grid-cols-4 gap-10 shadow-md bg-white  border-solid ml-2 py-2.5 px-2'>
+        <ul className='grid  grid-cols-4 gap-10 shadow-md bg-white  border-solid ml-2 py-2.5 px-2'>
           <li>
           <div className="flex items-center justify-start">
               <img className='w-7/12' src="/src/images/news.jpeg" alt="" />
