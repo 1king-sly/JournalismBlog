@@ -35,7 +35,7 @@ const Navbar = () => {
           <li className=' active:text-purple-600'>
             <Link to="/Business">Business</Link>
           </li>
-          <li className=' active:text-purple-600 '>
+          <li className=' active:text-purple-600  '>
             <Link to="/Entertainment">Entertainment</Link>
           </li>
         </ul>

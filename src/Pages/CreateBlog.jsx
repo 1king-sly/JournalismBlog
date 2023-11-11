@@ -25,7 +25,7 @@ const CreateBlog = () => {
   const checkUserAuthentication = async () => {
     // Check if the user is authenticated based on your login API
     try {
-      const response = await fetch('https://39b0-197-248-176-94.ngrok-free.app/api/v1/auth/check', {
+      const response = await fetch('https://mmust-jowa.onrender.com/api/auth/check', {
         method: 'GET',
         headers: {
 
@@ -59,7 +59,17 @@ const CreateBlog = () => {
 
   
     try {
-      const response = await fetch('https://39b0-197-248-176-94.ngrok-free.app/api/v1/createblog', {
+
+        // Generate a unique identifier for the file
+        const fileId = generateUniqueId();
+
+        // Append the file id to the form data
+        const formDataWithId = {
+          ...formData,
+          image_id: fileId,
+        };
+
+      const response = await fetch('https://mmust-jowa.onrender.com/api/createblog', {
         method: 'POST',
         headers: {
           // 'Access-Control-Allow-Origin':'*',
@@ -69,7 +79,7 @@ const CreateBlog = () => {
 
           
         },
-        body: JSON.stringify(formData), // You need to convert your JSON data to FormData
+        body: JSON.stringify(formDataWithId), // You need to convert your JSON data to FormData
       });
   
       if (response.ok) {
@@ -85,6 +95,12 @@ const CreateBlog = () => {
     } catch (error) {
       console.error('An error occurred:', error);
     }
+  };
+  const generateUniqueId = () => {
+    // Implement a function to generate a unique identifier (e.g., UUID)
+    // You can use libraries like `uuid` for this purpose.
+    // For simplicity, let's use a basic example.
+    return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
   };
   
   // Function to convert JSON data to FormData

@@ -5,6 +5,7 @@ import MainNews from '../Component/MainNews'
 import NewsCard from '../Component/NewsCard'
 import Navbar from '../Component/Navbar'
 import Footer from '../Component/Footer'
+import LoadingSpinner from '../Component/LoadingSpinner';
 
 function Homepage() {
   const [newsData, setNewsData] = useState([]);
@@ -13,41 +14,53 @@ function Homepage() {
   const [moreBusinessData, setMoreBusinessData] = useState([]);
   const [sportsData, setSportsData] = useState([]);
   const [entertainmentData, setEntertainmentData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   
 
   useEffect(() => {
-    // latest news data from api
-    fetch('https://mmust-jowa.onrender.com/news')
-      .then((response) => response.json())
-      .then((data) => setLatestData(data.slice(0, 1)))
-      .catch((error) => console.error('Error fetching news data:', error));
-    // latest sports data from api
-    fetch('https://mmust-jowa.onrender.com/sports')
-      .then((response) => response.json())
-      .then((data) => setSportsData(data.slice(0, 3)))
-      .catch((error) => console.error('Error fetching news data:', error));
-    // latest entertainment data from api
-    fetch('https://mmust-jowa.onrender.com/entertainment')
-      .then((response) => response.json())
-      .then((data) => setEntertainmentData(data.slice(0, 3)))
-      .catch((error) => console.error('Error fetching news data:', error));
-    // Fetch news data from the API
-    fetch('https://mmust-jowa.onrender.com/news')
-      .then((response) => response.json())
-      .then((data) => setNewsData(data.slice(1, 3)))
-      .catch((error) => console.error('Error fetching news data:', error));
+    const fetchData = async () => {
+      try {
+        // Fetch latest news data
+        const latestResponse = await fetch('https://mmust-jowa.onrender.com/news');
+        const latestData = await latestResponse.json();
+        setLatestData(latestData.slice(0, 1));
 
-    // Fetch business data from the API
-    fetch('https://mmust-jowa.onrender.com/business')
-      .then((response) => response.json())
-      .then((data) => setBusinessData(data.slice(0, 1)))
-      .catch((error) => console.error('Error fetching business data:', error));
-    fetch('https://mmust-jowa.onrender.com/business')
-      .then((response) => response.json())
-      .then((data) => setMoreBusinessData(data.slice(0, 3)))
-      .catch((error) => console.error('Error fetching business data:', error));
+        // Fetch sports data
+        const sportsResponse = await fetch('https://mmust-jowa.onrender.com/sports');
+        const sportsData = await sportsResponse.json();
+        setSportsData(sportsData.slice(0, 3));
+
+        // Fetch entertainment data
+        const entertainmentResponse = await fetch('https://mmust-jowa.onrender.com/entertainment');
+        const entertainmentData = await entertainmentResponse.json();
+        setEntertainmentData(entertainmentData.slice(0, 3));
+
+        // Fetch news data
+        const newsResponse = await fetch('https://mmust-jowa.onrender.com/news');
+        const newsData = await newsResponse.json();
+        setNewsData(newsData.slice(1, 3));
+
+        // Fetch business data
+        const businessResponse = await fetch('https://mmust-jowa.onrender.com/business');
+        const businessData = await businessResponse.json();
+        setBusinessData(businessData.slice(0, 1));
+
+        // Fetch more business data
+        const moreBusinessResponse = await fetch('https://mmust-jowa.onrender.com/business');
+        const moreBusinessData = await moreBusinessResponse.json();
+        setMoreBusinessData(moreBusinessData.slice(0, 3));
+
+        setLoading(true); // Set loading to false when data is fetched
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        setLoading(true); // Set loading to false even if there's an error
+      }
+    };
+
+    fetchData();
   }, []);
-  return (
+  return loading? (
     
     <div className=' overflow-x-hidden'>
       <div className='relative mb-24'>
@@ -170,7 +183,9 @@ function Homepage() {
     </div> 
 
     
-  )
+  ):  (
+    <LoadingSpinner />
+  );
 }
 
 export default Homepage;
