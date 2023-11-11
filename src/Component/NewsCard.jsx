@@ -13,7 +13,7 @@ function NewsCard (props){
         </div>
         <div className='flex gap-3 mt-3  '>
           
-            <div className='bg-orange-400 border-none cursor-pointer px-1 text-white font-semibold'>{author}</div>
+            <div className='bg-orange-400 w-10 border-none cursor-pointer px-1 text-white font-semibold'>{author}</div>
             <div>{published_on}</div>
            
         </div>

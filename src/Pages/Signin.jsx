@@ -27,6 +27,8 @@ function RegistrationForm() {
         // Registration was successful, you can redirect the user to the login page
         // Replace 'login-page' with the actual URL of your login page
         console.log('Signed up successfully')
+        window.location.href = '/Admin';
+        
       } else if (response.status === 400) {
         // Handle errors (e.g., display an error message to the user)
         console.error('Registration failed');
@@ -130,3 +132,8 @@ function RegistrationForm() {
 }
 
 export default RegistrationForm;
+// /* eslint-disable react/no-unescaped-entities */
+
+
+
+
