@@ -11,24 +11,19 @@ const AdminNavbar = () => {
 
   return (
 
-    <div className="w-full text-white flex  flex-row bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 justify-between  items-center fixed top-0  mb-10  ">
-      <div className='z-50 flex w-1/6 px-2  justify-between  '>
+    <div className="w-full text-white flex  flex-row bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  items-center fixed top-0  mb-10 md:px-20 ">
+      <div className='z-50 flex '>
         
-       <img className="w-20 h-20 object-cover     cursor-pointer" src="/src/images/logo.png" alt="" />
+       <img className="w-20 h-20 object-cover -ml-5  mr-32  cursor-pointer" src="/src/images/logo.png" alt="" />
 
       <div className='flex text-2xl font-bold justify-between items-center'>
       <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M19.75 12a.75.75 0 0 0-.75-.75H5a.75.75 0 0 0 0 1.5h14a.75.75 0 0 0 .75-.75Zm0-5a.75.75 0 0 0-.75-.75H5a.75.75 0 0 0 0 1.5h14a.75.75 0 0 0 .75-.75Zm0 10a.75.75 0 0 0-.75-.75H5a.75.75 0 0 0 0 1.5h14a.75.75 0 0 0 .75-.75Z" clip-rule="evenodd"/></svg>
-
+        <h1 >MMUST JOURNALISM STUDENTS ASSOCIATION</h1>
       </div>
-      
      
 
       </div>
-
-      <div className='flex text-2xl font-bold justify-between items-center'>
-      <h1 >MMUST JOURNALISM STUDENTS ASSOCIATION</h1>
-      </div>
-      <div className=' flex gap-2 justify-end items-center  '>
+      <div className=' flex gap-2 justify-end items-center ml-96 '>
         <div className='border-r mr-2 px-2'>
       <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 19v-9a6 6 0 0 1 6-6v0a6 6 0 0 1 6 6v9M6 19h12M6 19H4m14 0h2m-9 3h2"/><circle cx="12" cy="3" r="1"/></g></svg>
       </div>
