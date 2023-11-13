@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function BlogCard  (props)  {
     const title = props.title
@@ -18,8 +19,12 @@ function BlogCard  (props)  {
             <div>{published_on}</div>
            
         </div>
-        <div className=' font-bold cursor-pointer hover:text-orange-400 ease-in-out duration-150'>{title}</div>
-        <div className='border-none  px-1 text-black '>{slug}</div>
+        <Link to={`/Blog/${image}`} className='font-bold hover:text-orange-400 ease-in-out duration-150'>
+          {title}
+        </Link>
+        <Link to={`/Blog/${image}`} className='border-none px-1 text-black'>
+          {slug}
+        </Link>
     </div>
 
     </div>

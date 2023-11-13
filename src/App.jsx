@@ -5,6 +5,7 @@ import './App.css';
 
 // Import your components as needed
 import Homepage from './Pages/Homepage';
+import Blog from './Pages/Blog';
 import LoginForm from './Pages/Login';
 import Admin from './Pages/Admin';
 import RegistrationForm from './Pages/Signin';
@@ -28,6 +29,7 @@ class App extends React.Component {
           <Route path="/login" element={<LoginForm />} />
           <Route path="/signin" element={<RegistrationForm />} />
           <Route path="/CreateBlog" element={<CreateBlog />} />
+          <Route path="/Blog/:image_id" element={<Blog />} />
         </Routes>
       </Router>
     );

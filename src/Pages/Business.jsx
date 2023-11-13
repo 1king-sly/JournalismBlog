@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Component/Navbar'
+import Footer from '../Component/Footer'
+
 import BlogCard from '../Component/BlogCard';
 
 function Business  () {
@@ -7,7 +9,7 @@ function Business  () {
 
   useEffect(() => {
     // Fetch business data from the API
-    fetch('https://mmust-jowa.onrender.com/business')
+    fetch(' https://mmust-jowa.onrender.com/api/v1/user/business')
       .then((response) => response.json())
       .then((data) => setNewsData(data))
       .catch((error) => console.error('Error fetching news data:', error));
@@ -26,7 +28,7 @@ function Business  () {
           <BlogCard
             key={index}
             title={item.title}
-            slug={item.slug}
+            body={item.body}
             published_on={item.published_on}
             image={item.image_id}
           />

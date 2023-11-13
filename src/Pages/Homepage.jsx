@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import Category from '../Component/Category'
 import MainNews from '../Component/MainNews'
 import NewsCard from '../Component/NewsCard'
 import Navbar from '../Component/Navbar'
@@ -9,7 +9,7 @@ import LoadingSpinner from '../Component/LoadingSpinner';
 
 function Homepage() {
   const [newsData, setNewsData] = useState([]);
-  const [latestData, setLatestData] = useState([]);
+  const[latestData,setLatestData]=useState([]);
   const [businessData, setBusinessData] = useState([]);
   const [moreBusinessData, setMoreBusinessData] = useState([]);
   const [sportsData, setSportsData] = useState([]);
@@ -107,12 +107,12 @@ function Homepage() {
       
         
    </div>
-   <div className='w-9/12 mx-auto mt-10   '>
-    
-    <div className='w-full flex justify-between mt-10  '>
-      <h1 className='font-bold  text-lg mb-1'>NEWS</h1>
-      <p className=' cursor-pointer hover:text-orange-500 ease-in-out hover:underline duration-150'><Link to="/News">VIEW MORE</Link></p>
-      
+   <MainNews image="/src/images/news.jpeg" title="The first Main Blog" desc=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ad, sunt temporibus architecto eveniet recusandae libero suscipit veniam doloribus nostrum qui! Nobis deleniti vero quia assumenda iure reiciendis. Repellat ut at, corrupti quibusdam voluptate laboriosam aliquid numquam enim ipsa sed!"/>
+   <MainNews image="/src/images/news.jpeg" title="The first Main Blog" desc=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ad, sunt temporibus architecto eveniet recusandae libero suscipit veniam doloribus nostrum qui! Nobis deleniti vero quia assumenda iure reiciendis. Repellat ut at, corrupti quibusdam voluptate laboriosam aliquid numquam enim ipsa sed!"/>
+   <MainNews image="/src/images/news.jpeg" title="The first Main Blog" desc=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ad, sunt temporibus architecto eveniet recusandae libero suscipit veniam doloribus nostrum qui! Nobis deleniti vero quia assumenda iure reiciendis. Repellat ut at, corrupti quibusdam voluptate laboriosam aliquid numquam enim ipsa sed!"/>
+
+   <div className='w-full  justify-center flex mt-7 -mb-10 '>
+    <div className='bg-orange-500 p-2 rounded-3xl text-white cursor-pointer '>MORE STORIES</div>
     </div>
     <div className='w-full flex'>
       {newsData.map((item, index) => (
@@ -180,7 +180,7 @@ function Homepage() {
     
    </div>
  
-    </div> 
+  
 
     
   ):  (

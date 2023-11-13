@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Component/Navbar'
+import Footer from '../Component/Footer'
 import BlogCard from '../Component/BlogCard';
 
 function News  () {
@@ -7,7 +8,7 @@ function News  () {
 
   useEffect(() => {
     // Fetch news data from the API
-    fetch('https://mmust-jowa.onrender.com/news')
+    fetch(' https://mmust-jowa.onrender.com/api/v1/user/news')
       .then((response) => response.json())
       .then((data) => setNewsData(data))
       .catch((error) => console.error('Error fetching news data:', error));
@@ -16,6 +17,7 @@ function News  () {
     <div className='overflow-x-hidden'>
      <div className='relative mb-24'>
       <Navbar/>
+     
     </div>
     <h1 className='w-screen mt-20 flex text-2xl font-bold  justify-center'>News</h1>
 
@@ -32,7 +34,9 @@ function News  () {
           />
         ))}
         </div>
+        <Footer/>
     </div>
+    
   
   )
 }
