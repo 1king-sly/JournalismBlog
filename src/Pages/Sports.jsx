@@ -7,7 +7,7 @@ function Sports  () {
 
   useEffect(() => {
     // Fetch sports data from the API
-    fetch('https://mmust-jowa.onrender.com/sports')
+    fetch('https://mmust-jowa.onrender.com/api/v1/user/sports')
       .then((response) => response.json())
       .then((data) => setNewsData(data))
       .catch((error) => console.error('Error fetching news data:', error));

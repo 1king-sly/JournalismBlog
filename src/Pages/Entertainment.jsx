@@ -7,7 +7,7 @@ function Entertainment  () {
 
   useEffect(() => {
     // Fetch entertainment data from the API
-    fetch('https://mmust-jowa.onrender.com/entertainment')
+    fetch('https://mmust-jowa.onrender.com/api/v1/user/entertainment')
       .then((response) => response.json())
       .then((data) => setNewsData(data))
       .catch((error) => console.error('Error fetching news data:', error));

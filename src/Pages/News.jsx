@@ -7,7 +7,7 @@ function News  () {
 
   useEffect(() => {
     // Fetch news data from the API
-    fetch('https://mmust-jowa.onrender.com/news')
+    fetch('https://mmust-jowa.onrender.com/api/v1/user/news')
       .then((response) => response.json())
       .then((data) => setNewsData(data))
       .catch((error) => console.error('Error fetching news data:', error));

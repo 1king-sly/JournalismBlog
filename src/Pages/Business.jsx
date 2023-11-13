@@ -7,7 +7,7 @@ function Business  () {
 
   useEffect(() => {
     // Fetch business data from the API
-    fetch('https://mmust-jowa.onrender.com/business')
+    fetch('https://mmust-jowa.onrender.com/api/v1/user/business')
       .then((response) => response.json())
       .then((data) => setNewsData(data))
       .catch((error) => console.error('Error fetching news data:', error));

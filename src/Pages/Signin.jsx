@@ -16,7 +16,7 @@ function RegistrationForm() {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://mmust-jowa.onrender.com/api/auth/register', {
+      const response = await fetch('https://mmust-jowa.onrender.com/api/v1/auth/register', {
         method: 'POST',
         headers:
         {"Content-Type": "application/json"},

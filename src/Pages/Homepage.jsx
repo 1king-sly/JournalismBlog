@@ -22,32 +22,32 @@ function Homepage() {
     const fetchData = async () => {
       try {
         // Fetch latest news data
-        const latestResponse = await fetch('https://mmust-jowa.onrender.com/news');
+        const latestResponse = await fetch('https://mmust-jowa.onrender.com/api/v1/user/news');
         const latestData = await latestResponse.json();
         setLatestData(latestData.slice(0, 1));
 
         // Fetch sports data
-        const sportsResponse = await fetch('https://mmust-jowa.onrender.com/sports');
+        const sportsResponse = await fetch('https://mmust-jowa.onrender.com/api/v1/user/sports');
         const sportsData = await sportsResponse.json();
         setSportsData(sportsData.slice(0, 3));
 
         // Fetch entertainment data
-        const entertainmentResponse = await fetch('https://mmust-jowa.onrender.com/entertainment');
+        const entertainmentResponse = await fetch('https://mmust-jowa.onrender.com/api/v1/user/entertainment');
         const entertainmentData = await entertainmentResponse.json();
         setEntertainmentData(entertainmentData.slice(0, 3));
 
         // Fetch news data
-        const newsResponse = await fetch('https://mmust-jowa.onrender.com/news');
+        const newsResponse = await fetch('https://mmust-jowa.onrender.com/api/v1/user/news');
         const newsData = await newsResponse.json();
         setNewsData(newsData.slice(1, 3));
 
         // Fetch business data
-        const businessResponse = await fetch('https://mmust-jowa.onrender.com/business');
+        const businessResponse = await fetch('https://mmust-jowa.onrender.com/api/v1/user/business');
         const businessData = await businessResponse.json();
         setBusinessData(businessData.slice(0, 1));
 
         // Fetch more business data
-        const moreBusinessResponse = await fetch('https://mmust-jowa.onrender.com/business');
+        const moreBusinessResponse = await fetch('https://mmust-jowa.onrender.com/api/v1/user/business');
         const moreBusinessData = await moreBusinessResponse.json();
         setMoreBusinessData(moreBusinessData.slice(0, 3));
 
