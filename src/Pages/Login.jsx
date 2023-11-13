@@ -27,9 +27,12 @@ function LoginForm() {
         console.log(data)
 
         const access_token = data.success.access_token;
+        const user = data.success.User;
+        access_token;
         console.log(access_token)
 
         localStorage.setItem('accessToken', access_token);
+        localStorage.setItem('User', user);
 
        
 
