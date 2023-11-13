@@ -85,14 +85,14 @@ const Dashboard = () => {
           <li>HEADLINE</li>
           <ul className='hidden lg:flex gap-24 justify-between ml-4 '>
           <li>DATE</li>
-          <li>STATUS</li>
-          <li>COMMENTS</li>
+          <li >STATUS</li>
+          <li>VIEWS</li>
           </ul>
         </ul> 
          </div>
 
-        <div className='  col-span-3 shadow-md bg-white    py-2.5 '>
-        <ul className='grid  grid-cols-4 gap-10 shadow-md bg-white  border-solid ml-2 py-2.5 px-2'>
+        <div className='relative col-span-3 shadow-md lg:bg-blue-400 bg:white    lg:py-0.5 py-2.5'>
+        <ul className='justify-center items-center grid lg:grid-cols-4 grid-cols-2  gap-2.5 md:gap-6.5 lg:gap-10 shadow-md bg-white  border-solid ml-1 lg:ml-2 py-2.5 lg:px-2 px-1'>
           <li>
           <div className="flex items-center justify-between mb-6">
               <img className='flex-1 rounded-[5px] object-cover mr-3' src="/src/images/news.jpeg" alt="" />
