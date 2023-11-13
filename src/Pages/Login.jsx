@@ -14,7 +14,7 @@ function LoginForm() {
     event.preventDefault();
 
     try {
-      const response = await fetch('https://mmust-jowa.onrender.com/api/auth/login', {
+      const response = await fetch('https://mmust-jowa.onrender.com/api/v1/auth/login', {
         method: 'POST',
         headers:
         {"Content-Type": "application/json"},
@@ -24,16 +24,25 @@ function LoginForm() {
       if (response.status === 200) {
         // Login was successful
         const data = await response.json();
-        const accessToken = data.access_token;
+        console.log(data)
+
+        const access_token = data.success.access_token;
+        const user = data.success.User;
+        access_token;
+        console.log(access_token)
+
+        localStorage.setItem('accessToken', access_token);
+        localStorage.setItem('User', user);
+
+       
 
         // Store the access token in local storage (you can also use cookies)
-        localStorage.setItem('accessToken', accessToken);
 
         // Redirect the user to a protected page or perform other actions
         // Replace 'protected-page' with the actual URL of the protected page
         window.location.href = '/Admin';
 
-        console.log('Byrone is a genius')
+        
 
       }else if (response.status === 401) {
         // Handle authentication failure (e.g., display an error message)

@@ -9,11 +9,17 @@ function Business  () {
 
   useEffect(() => {
     // Fetch business data from the API
-    fetch(' https://mmust-jowa.onrender.com/api/v1/user/business')
+    fetch('https://mmust-jowa.onrender.com/api/v1/user/business')
       .then((response) => response.json())
       .then((data) => setNewsData(data))
       .catch((error) => console.error('Error fetching news data:', error));
   }, []);
+
+  const formatToLocalTime = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false, };
+    return new Date(dateString).toLocaleString(undefined, options);
+  };
+  
   return (
     <div className='overflow-x-hidden'>
      <div className='relative mb-24'>
@@ -28,8 +34,8 @@ function Business  () {
           <BlogCard
             key={index}
             title={item.title}
-            body={item.body}
-            published_on={item.published_on}
+            slug={item.slug}
+            published_on={formatToLocalTime(item.published_on)}
             image={item.image_id}
           />
         ))}

@@ -20,11 +20,12 @@ const CreateBlog = () => {
   const checkUserAuthentication = async () => {
     try {
       // Check if the user is authenticated based on the API response
-      const response = await fetch('https://mmust-jowa.onrender.com/api/auth/check', {
+      const response = await fetch('https://mmust-jowa.onrender.com/api/auth/login/check', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
           'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
+          
         },
       });
   
@@ -39,6 +40,7 @@ const CreateBlog = () => {
     }
   };
   
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -46,10 +48,10 @@ const CreateBlog = () => {
     // Check if the user is authenticated before submitting the blog
     if (!isAuthenticated) {
       console.error('User not authenticated. Unable to create a blog.');
-      return;
+      
+      return window.location.href = '/login';
     }
-    const { image_id, ...formDataWithoutFile } = formData;
-    const token = ""
+    
 
   
     try {
@@ -63,16 +65,26 @@ const CreateBlog = () => {
           image_id: fileId,
         };
 
-      const response = await fetch('https://mmust-jowa.onrender.com/api/createblog', {
+      const response = await fetch('https://mmust-jowa.onrender.com/api/v1/admin/createblog', {
         method: 'POST',
         headers: {
-          'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5OTcxMTU4MiwianRpIjoiMjE2NzhkMzctYTczYi00OTkzLWFmMmUtYWMyNjU5ZDVkMDBmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjk5NzExNTgyLCJleHAiOjE2OTk3MTI0ODJ9.hsKiRSGu0dCPM5cuYiNIQ72Jz5k_UWrEDcaVF1jf3R4' ,        },
+          "Content-type": "application/json",
+          'Authorization': 'Bearer ' + localStorage.getItem('accessToken'),
+                },
         body: JSON.stringify(formDataWithId), // You need to convert your JSON data to FormData
         
       });
   
       if (response.ok) {
         console.log('Blog post created successfully');
+        console.log(formDataWithId);
+
+         // Assuming the server returns the URL of the uploaded image
+      const imageResponse = await response.json();
+      const imageUrl = imageResponse.image_url;
+
+      // Use the imageUrl to display the image
+      console.log('Image URL:', imageUrl);
       } else {
         console.error('Failed to create blog post');
       }
@@ -134,15 +146,13 @@ const CreateBlog = () => {
   
   
 
-  if (!isAuthenticated) {
-    return <p>You are not logged in. Please log in to create a blog.</p>;
-  }
+ 
   
 
   return (
     <>
       {/* create new blog */}
-      <form className="mt-10" onSubmit={handleSubmit} encType="multipart/form-data" method="post">
+      <form className="mt-10 " onSubmit={handleSubmit} encType="multipart/form-data" method="post">
     {/* ... your existing form fields ... */}
 
     <div className='max-w-xl bg-slate-100 px-20 py-10 mb-10 md:mx-auto sm:text-left lg:max-w-2xl md:mb-12 '>

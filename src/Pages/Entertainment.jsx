@@ -8,11 +8,16 @@ function Entertainment  () {
 
   useEffect(() => {
     // Fetch entertainment data from the API
-    fetch('https://mmust-jowa.onrender.com/entertainment')
+    fetch('https://mmust-jowa.onrender.com/api/v1/user/entertainment')
       .then((response) => response.json())
       .then((data) => setNewsData(data))
       .catch((error) => console.error('Error fetching news data:', error));
   }, []);
+  const formatToLocalTime = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', hour12: false, };
+    return new Date(dateString).toLocaleString(undefined, options);
+  };
+  
   return (
     <div className='overflow-x-hidden' >
      <div className='relative mb-24'>
@@ -29,7 +34,7 @@ function Entertainment  () {
             key={index}
             title={item.title}
             slug={item.slug}
-            published_on={item.published_on}
+            published_on={formatToLocalTime(item.published_on)}
             image={item.image_id}
           />
         ))}
