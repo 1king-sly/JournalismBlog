@@ -11,7 +11,7 @@ const AdminNavbar = () => {
 
   return (
 
-    <div className="w-full text-white flex  flex-row bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  items-center fixed top-0  mb-10 md:px-20  justify-between">
+    <div className="w-full text-white flex  flex-row bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  items-center fixed top-0   md:px-20  justify-between">
       <div className='z-50 flex '>
         
        <img className="w-20 h-20 object-cover   mr-32  cursor-pointer" src="/src/images/logo.png" alt="" />

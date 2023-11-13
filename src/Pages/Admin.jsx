@@ -21,7 +21,7 @@ function Admin() {
       </div>
       
 
-    <div className='flex  mt-[80px] w-screen '>
+    <div className='flex  mt-[70px] w-screen '>
       {/* menu section  */}
 
       <div className='w-1/6'>
@@ -31,21 +31,20 @@ function Admin() {
         
       {/* blogdashboard */}
       <div className='showcase w-5/6'>
-        <h5 className='mt-2 text-xl w-full  bold font-semibold text-gray-400 -mb-4  px-10'>{selectedItem}</h5>
+        <h5 className='mt-5 text-xl w-full  bold font-semibold text-gray-400 -mb-4  px-10'>{selectedItem}</h5>
         <div className="">
             <div className=" px-10 py-5 ">
               {/* Render content based on the selected item */}
               {selectedItem === 'Dashboard' && <Dashboard />}
               {selectedItem === 'Add Blog' && <CreateBlog />}
-              {/* {selectedItem === 'Profile Settings' && <SidePanel />} */}
+              {selectedItem === 'Profile Settings' && <ProfilePage />}
       
             </div>
         </div>
 
       </div>
     </div>
-    <ProfilePage/>
-    </div>
+       </div>
   )
 }
 
