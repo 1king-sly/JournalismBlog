@@ -5,7 +5,7 @@ const Dashboard = () => {
   return (
     <>
     {/* statistics */}
-      <div className=" grid gap-10 col-span-3 items-center sm:grid-cols-2 lg:grid-cols-4">
+      <div className=" grid gap-10 col-span-3 items-center sm:grid-cols-2 lg:grid-cols-3">
           
           <div className="grid  justify-between overflow-hidden  text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
             <div className="p-5">
@@ -30,29 +30,7 @@ const Dashboard = () => {
           </h6>
             </div>
           </div>
-          <div className="grid  justify-between overflow-hidden  text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
-            <div className="p-5">
-              <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
-                <svg
-                  className="w-8 h-8 text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </div>
-              <p className="mb-2  font-bold">Pages</p>
-              <h6 className="text-3xl font-bold text-deep-purple-accent-400">
-            144K
-          </h6>
-            </div>
-          </div>
+          
           <div className="grid  justify-between overflow-hidden  text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
             <div className="p-5">
               <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
@@ -107,14 +85,14 @@ const Dashboard = () => {
           <li>HEADLINE</li>
           <ul className='hidden lg:flex gap-24 justify-between ml-4 '>
           <li>DATE</li>
-          <li >STATUS</li>
-          <li>VIEWS</li>
+          <li>STATUS</li>
+          <li>COMMENTS</li>
           </ul>
         </ul> 
          </div>
 
-        <div className='relative col-span-3 shadow-md lg:bg-blue-400 bg:white    lg:py-0.5 py-2.5'>
-        <ul className='justify-center items-center grid lg:grid-cols-4 grid-cols-2  gap-2.5 md:gap-6.5 lg:gap-10 shadow-md bg-white  border-solid ml-1 lg:ml-2 py-2.5 lg:px-2 px-1'>
+        <div className='  col-span-3 shadow-md bg-white    py-2.5 '>
+        <ul className='grid  grid-cols-4 gap-10 shadow-md bg-white  border-solid ml-2 py-2.5 px-2'>
           <li>
           <div className="flex items-center justify-between mb-6">
               <img className='flex-1 rounded-[5px] object-cover mr-3' src="/src/images/news.jpeg" alt="" />
