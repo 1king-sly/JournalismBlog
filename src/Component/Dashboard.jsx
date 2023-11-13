@@ -1,6 +1,5 @@
-import React from 'react'
-import { CiMenuKebab } from 'react-icons/ci'; // or the correct path
-
+import React,{ useState } from 'react';
+import ThreeDots from './ThreeDots';
 
 const Dashboard = () => {
   return (
@@ -133,7 +132,7 @@ const Dashboard = () => {
             <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m14.06 9.02l.92.92L5.92 19H5v-.92l9.06-9.06M17.66 3c-.25 0-.51.1-.7.29l-1.83 1.83l3.75 3.75l1.83-1.83a.996.996 0 0 0 0-1.41l-2.34-2.34c-.2-.2-.45-.29-.71-.29zm-3.6 3.19L3 17.25V21h3.75L17.81 9.94l-3.75-3.75z"/></svg></li>
             <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M18 19a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V7H4V4h4.5l1-1h4l1 1H19v3h-1v12M6 7v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2V7H6m12-1V5h-4l-1-1h-3L9 5H5v1h13M8 9h1v10H8V9m6 0h1v10h-1V9Z"/></svg> </li>
           </ul> */}
-          <div className='absolute md:right-6 lg:right-12 right-3 mb-4 bottom-3'><CiMenuKebab /></div>
+          <ThreeDots />
          </ul>
            </div>
 
