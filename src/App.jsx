@@ -12,8 +12,8 @@ import News from './Pages/News';
 import Entertainment from './Pages/Entertainment';
 import Business from './Pages/Business';
 import Sports from './Pages/Sports';
-import MyBlog from './Pages/MyBlog';
-import CreateBlog from './Pages/MyBlog';
+import CreateBlog from './Pages/CreateBlog';
+
 class App extends React.Component {
   render() {
     return (

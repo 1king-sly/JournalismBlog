@@ -68,6 +68,7 @@ const CreateBlog = () => {
         headers: {
           'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY5OTcxMTU4MiwianRpIjoiMjE2NzhkMzctYTczYi00OTkzLWFmMmUtYWMyNjU5ZDVkMDBmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNjk5NzExNTgyLCJleHAiOjE2OTk3MTI0ODJ9.hsKiRSGu0dCPM5cuYiNIQ72Jz5k_UWrEDcaVF1jf3R4' ,        },
         body: JSON.stringify(formDataWithId), // You need to convert your JSON data to FormData
+        
       });
   
       if (response.ok) {
