@@ -60,6 +60,11 @@ function Homepage() {
 
     fetchData();
   }, []);
+
+  const formatToLocalTime = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric',hour12: false,  };
+    return new Date(dateString).toLocaleString(undefined, options);
+  };
   return loading? (
     
     <div className=' overflow-x-hidden'>
@@ -74,7 +79,7 @@ function Homepage() {
             key={index}
             title={item.title}
             slug={item.slug}
-            published_on={item.published_on}
+            published_on={formatToLocalTime(item.published_on)}
             image={item.image_id}
           />
         ))}
@@ -86,7 +91,7 @@ function Homepage() {
             key={index}
             title={item.title}
             slug={item.slug}
-            published_on={item.published_on}
+            published_on={formatToLocalTime(item.published_on)}
             image={item.image_id}
           />
         ))}
@@ -99,7 +104,7 @@ function Homepage() {
           key={index}
           title={item.title}
           slug={item.slug}
-          published_on={item.published_on}
+          published_on={formatToLocalTime(item.published_on)}
           image={item.image_id}
           />
         ))}
@@ -120,7 +125,7 @@ function Homepage() {
             key={index}
             title={item.title}
             slug={item.slug}
-            published_on={item.published_on}
+            published_on={formatToLocalTime(item.published_on)}
             image={item.image_id}
           />
         ))}
@@ -138,7 +143,7 @@ function Homepage() {
             key={index}
             title={item.title}
             slug={item.slug}
-            published_on={item.published_on}
+            published_on={formatToLocalTime(item.published_on)}
             image={item.image_id}
           />
         ))}
@@ -155,7 +160,7 @@ function Homepage() {
             key={index}
             title={item.title}
             slug={item.slug}
-            published_on={item.published_on}
+            published_on={formatToLocalTime(item.published_on)}
             image={item.image_id}
           />
         ))}
@@ -172,7 +177,7 @@ function Homepage() {
             key={index}
             title={item.title}
             slug={item.slug}
-            published_on={item.published_on}
+            published_on={formatToLocalTime(item.published_on)}
             image={item.image_id}
           />
         ))}

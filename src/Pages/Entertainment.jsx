@@ -12,6 +12,11 @@ function Entertainment  () {
       .then((data) => setNewsData(data))
       .catch((error) => console.error('Error fetching news data:', error));
   }, []);
+  const formatToLocalTime = (dateString) => {
+    const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short',hour12: false, timeZone: 'UTC' };
+    return new Date(dateString).toLocaleString(undefined, options);
+  };
+  
   return (
     <div className='overflow-x-hidden' >
      <div className='relative mb-24'>
@@ -28,7 +33,7 @@ function Entertainment  () {
             key={index}
             title={item.title}
             slug={item.slug}
-            published_on={item.published_on}
+            published_on={formatToLocalTime(item.published_on)}
             image={item.image_id}
           />
         ))}
