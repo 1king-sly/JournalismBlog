@@ -4,7 +4,7 @@ const Dashboard = () => {
   return (
     <>
     {/* statistics */}
-      <div className=" grid gap-10 col-span-3 items-center sm:grid-cols-2 lg:grid-cols-4">
+      <div className=" grid gap-10 col-span-3 items-center sm:grid-cols-2 lg:grid-cols-3">
           
           <div className="grid  justify-between overflow-hidden  text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
             <div className="p-5">
@@ -29,29 +29,7 @@ const Dashboard = () => {
           </h6>
             </div>
           </div>
-          <div className="grid  justify-between overflow-hidden  text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
-            <div className="p-5">
-              <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
-                <svg
-                  className="w-8 h-8 text-deep-purple-accent-400"
-                  stroke="currentColor"
-                  viewBox="0 0 52 52"
-                >
-                  <polygon
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    fill="none"
-                    points="29 13 14 29 25 29 23 39 38 23 27 23"
-                  />
-                </svg>
-              </div>
-              <p className="mb-2  font-bold">Pages</p>
-              <h6 className="text-3xl font-bold text-deep-purple-accent-400">
-            144K
-          </h6>
-            </div>
-          </div>
+          
           <div className="grid  justify-between overflow-hidden  text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
             <div className="p-5">
               <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
@@ -107,7 +85,7 @@ const Dashboard = () => {
           <ul className='flex gap-24 justify-between ml-4 '>
           <li>DATE</li>
           <li>STATUS</li>
-          <li>VIEWS</li>
+          <li>COMMENTS</li>
           </ul>
         </ul> 
          </div>

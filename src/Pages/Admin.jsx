@@ -4,9 +4,10 @@ import Dashboard from '../Component/Dashboard';
 import SidePanel from '../Component/SidePanel';
 import AdminSidebar from '../Component/AdminSidebar';
 import CreateBlog from './CreateBlog';
-import ProfilePage from '../Component/ProfilePage.jsx'
-
- 
+import Business from '../Pages/Business'
+import Sports from '../Pages/Sports'
+import Entertainment from '../Pages/Entertainment'
+import News from '../Pages/News'
 function Admin() {
 
   const [selectedItem, setSelectedItem] = useState('Dashboard'); // Default selected item
@@ -38,7 +39,7 @@ function Admin() {
               {selectedItem === 'Dashboard' && <Dashboard />}
               {selectedItem === 'Add Blog' && <CreateBlog />}
               {selectedItem === 'Profile Settings' && <ProfilePage />}
-      
+
             </div>
         </div>
 
