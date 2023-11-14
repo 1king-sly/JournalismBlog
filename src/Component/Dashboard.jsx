@@ -1,5 +1,4 @@
 import React,{ useState, useEffect } from 'react';
-import ThreeDots from './ThreeDots';
 import AdminBlogs from './AdminBlogs';
 
 function Dashboard  ()  {

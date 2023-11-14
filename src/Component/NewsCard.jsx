@@ -5,6 +5,7 @@ function NewsCard (props){
     const title = props.title
     const published_on = props.published_on
     const slug = props.slug
+    localStorage.setItem('id');
     // const slug = props.slug
   return (
     <div className=' shadow-lg h-[360px] w-full  rounded-lg p-2 cursor-pointer object-contain'>

@@ -6,21 +6,8 @@ import BlogCard from '../Component/BlogCard';
 
 const SidePanel = () => {
   return (
-    <>
-         
-      <div >
-        <div>
-
-        
-      <ul className=''>
-        <h5 className='mb-1 text-xl bold font-semibold text-gray-400'>CATEGORIES</h5>
-        <li className='text-gray-400 hover:cursor-pointer hover:underline hover:decoration-blue-400'><Link to="/News">News</Link></li><hr className="w-full my-2 border-gray-300" />
-        <li className='text-gray-400 hover:cursor-pointer hover:underline hover:decoration-blue-400'><Link to="/Sports">Sports</Link></li><hr className="w-full my-2 border-gray-300" />
-        <li className='text-gray-400 hover:cursor-pointer hover:underline hover:decoration-blue-400'> <Link to="/Business">Business</Link></li><hr className="w-full my-2 border-gray-300" />
-        <li className='text-gray-400 hover:cursor-pointer hover:underline hover:decoration-blue-400'><Link to="/Entertainment">Entertainment</Link></li> <hr className="w-full my-2 border-gray-300" />
-
-      </ul>
-      <ul className='mt-5'>
+        <div className=''>
+      <ul className='mt-[50%]'>
         <h5 className='mb-1 text-xl bold font-semibold text-gray-400'>LATEST POST</h5>
         <div className="flex flex-col justify-center w-9/12">
           <div className="flex">
@@ -84,9 +71,6 @@ const SidePanel = () => {
 
       </ul>
       </div>
-      </div>
-    
-    </>
   )
 }
 
