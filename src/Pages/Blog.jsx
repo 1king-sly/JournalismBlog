@@ -38,7 +38,7 @@ function Blog() {
               body={newsData.body}
               author={newsData.author}
               published_on={newsData.published_on}
-              image={newsData.image_id}
+              image={newsData.image}
             />
           </div>
         </div>
