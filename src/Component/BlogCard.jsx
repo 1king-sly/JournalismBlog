@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 function BlogCard  (props)  {
+    const id = props.id
     const title = props.title
     const image = props.image
     const slug = props.slug
@@ -19,10 +20,10 @@ function BlogCard  (props)  {
             <div>{published_on}</div>
            
         </div>
-        <Link to={`/Blog/${image}`} className='font-bold hover:text-orange-400 ease-in-out duration-150'>
+        <Link to={`/Blog/${id}`} className='font-bold hover:text-orange-400 ease-in-out duration-150'>
           {title}
         </Link>
-        <Link to={`/Blog/${image}`} className='border-none px-1 text-black'>
+        <Link to={`/Blog/${id}`} className='border-none px-1 text-black'>
           {slug}
         </Link>
     </div>

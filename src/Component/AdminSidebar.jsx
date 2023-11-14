@@ -19,8 +19,8 @@ const AdminSidebar = ({ onItemClick }) => {
   return (
     <>
 
-    <div className='bg-blue-300 fixed  w-2/12 mt-2.5 h-full'>
-        <ul className='flex flex-col justify-center -ml-5 items-start text-lg px-20 mt-3 text-left '>
+    <div className='bg-blue-300  w-full h-screen'>
+        <ul className='flex flex-col justify-center -ml-5 items-start text-lg px-20 mt-3 text-left fixed'>
            
           <li className='py-1 flex items-center gap-3 cursor-pointer' onClick={() => handleItemClick('Dashboard')}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 9V4H20v5h-6.5ZM4 12V4h6.5v8H4Zm9.5 8v-8H20v8h-6.5ZM4 20v-5h6.5v5H4Zm1-9h4.5V5H5v6Zm9.5 8H19v-6h-4.5v6Zm0-11H19V5h-4.5v3ZM5 19h4.5v-3H5v3Zm4.5-8Zm5-3Zm0 5Zm-5 3Z"/></svg>

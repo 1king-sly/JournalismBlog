@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import BlogCard from '../Component/BlogCard';
+
 
 
 const SidePanel = () => {
@@ -7,7 +9,7 @@ const SidePanel = () => {
     <>
          
       <div >
-        <div className=''>
+        <div>
 
         
       <ul className=''>

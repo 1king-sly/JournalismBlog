@@ -10,7 +10,6 @@ function Content(props) {
     const body = props.body
     const published_on = props.published_on
     const author = props.author
-
   return (
     <div>
         <Navbar/>
@@ -52,7 +51,7 @@ function Content(props) {
   </div>
   </div>
   <div className='w-11/12'>
-    <SidePanel/>
+    
   </div>
 </div>
 
