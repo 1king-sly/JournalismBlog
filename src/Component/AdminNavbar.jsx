@@ -3,6 +3,7 @@ import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
 
 const AdminNavbar = () => {
+const name = localStorage.getItem('User')
 const firstName = name ? name.split(' ')[0] : '';
   return (
 

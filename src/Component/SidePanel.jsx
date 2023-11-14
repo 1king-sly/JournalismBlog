@@ -5,7 +5,7 @@ const SidePanel = () => {
     <>
          
       <div >
-        <div className=''>
+        <div>
 
         
       <ul className=''>

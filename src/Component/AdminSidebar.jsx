@@ -9,7 +9,7 @@ const AdminSidebar = ({ onItemClick }) => {
   return (
     <>
 
-    <div className='bg-blue-300  w-full h-full'>
+    <div className='bg-blue-300  w-full h-screen'>
         <ul className='flex flex-col justify-center -ml-5 items-start text-lg px-20 mt-3 text-left fixed'>
            
           <li className='py-1 flex items-center gap-3 cursor-pointer' onClick={() => handleItemClick('Dashboard')}>
