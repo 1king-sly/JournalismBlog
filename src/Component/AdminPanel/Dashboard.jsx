@@ -14,7 +14,6 @@ function Dashboard  ()  {
         const response = await fetch('https://mmust-jowa.onrender.com/api/v1/admin/news/latest', {
           method: 'GET',
           headers: {
-            mode: 'cors',
             'Content-Type': 'application/json',
             'Authorization': `Bearer ` + localStorage.getItem('accessToken'),
           },
@@ -31,7 +30,6 @@ function Dashboard  ()  {
         const commentsResponse = await fetch('https://mmust-jowa.onrender.com/api/v1/admin/total/comments', {
           method: 'GET',
           headers: {
-            mode: 'cors',
             'Content-Type': 'application/json',
             'Authorization': `Bearer ` + localStorage.getItem('accessToken'),
           },
@@ -47,7 +45,6 @@ function Dashboard  ()  {
         const blogsResponse = await fetch('https://mmust-jowa.onrender.com/api/v1/admin/total/blogs', {
           method: 'GET',
           headers: {
-            mode: 'cors',
             'Content-Type': 'application/json',
             'Authorization': `Bearer ` + localStorage.getItem('accessToken'),
           },

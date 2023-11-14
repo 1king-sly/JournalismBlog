@@ -12,7 +12,6 @@ const AdminBusiness = () => {
           const response = await fetch('https://mmust-jowa.onrender.com/api/v1/admin/blogs/business', {
             method: 'GET',
             headers: {
-              mode: 'cors',
               'Content-Type': 'application/json',
               'Authorization': `Bearer ` + localStorage.getItem('accessToken'),
             },
