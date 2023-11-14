@@ -123,7 +123,7 @@ const CreateBlog = () => {
     <>
     <div className='grid grid-cols-3  gap-9'>
       {/* create new blog */}
-      <form className='mt-2 col-span-2' onSubmit={handleSubmit} encType="multipart/form-data" method="post">
+      <form className='mt-2 col-span-2 ' onSubmit={handleSubmit} encType="multipart/form-data" method="post">
     {/* ... your existing form fields ... */}
 
     <div className='max-w-2l bg-white-100 shadow-lg px-4 py-10 mb-10 md:mx-auto sm:text-left  md:mb-12 '>
@@ -141,7 +141,7 @@ const CreateBlog = () => {
                 id="title"
                 onChange={handleChange}
                 value={formData.title}
-                className="block text-2xl font-bold uppercase flex-1 border-2 py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 placeholder:normal-case placeholder:font-normal  sm:text-sm sm:leading-6"
+                className="block  text-2xl font-bold uppercase flex-1 border-2 py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 placeholder:normal-case placeholder:font-normal  sm:text-sm sm:leading-6"
                 placeholder="Enter Title"
               />
             </div>
