@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import AdminNavbar from '../Component/AdminNavbar';
-import Dashboard from '../Component/Dashboard';
+import AdminNavbar from '../Component/AdminPanel/AdminNavbar';
+import Dashboard from '../Component/AdminPanel/Dashboard';
 import AdminSidebar from '../Component/AdminSidebar';
 import CreateBlog from './CreateBlog';
 
