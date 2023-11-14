@@ -57,9 +57,11 @@ function LoginForm() {
   };
 
   return (
-<div className='w-screen flex items-center justify-center h-screen mx-auto '>
+<div className='w-screen flex flex-col items-center justify-center h-screen mx-auto '>
+<img className="w-25 h-25  w-1/6 mt-20 cursor-pointer" src="/src/images/logo.png" alt="" />
+
     <form className='w-96  h-2/3 flex flex-col  justify-center gap-5 px-5 shadow-lg rounded-lg ' onSubmit={handleSubmit}>
-    
+     
       <div>
         <label className='text-gray-500' htmlFor="email">Email:</label>
         <input

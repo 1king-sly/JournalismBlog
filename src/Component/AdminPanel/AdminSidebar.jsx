@@ -8,6 +8,7 @@ const AdminSidebar = ({ onItemClick }) => {
       onItemClick(item);
     }
   };
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -19,7 +20,7 @@ const AdminSidebar = ({ onItemClick }) => {
   return (
     <>
 
-    <div className='bg-blue-300 fixed  w-2/12 mt-2.5 h-full'>
+    <div className='bg-blue-300 fixed  w-2/12 mt-2 h-full'>
         <ul className='flex flex-col justify-center -ml-5 items-start text-lg px-20 mt-3 text-left '>
            
           <li className='py-1 flex items-center gap-3 cursor-pointer' onClick={() => handleItemClick('Dashboard')}>
