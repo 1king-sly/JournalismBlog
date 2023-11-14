@@ -30,7 +30,7 @@ const AdminSidebar = ({ onItemClick }) => {
             <p className='-ml-6'>Categories</p>
             <svg className=''  onClick={toggleDropdown} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m7 10l5 5l5-5H7Z"/></svg>
             {isOpen && (
-        <ul className="dropdown-menu w-full flex flex-col ml-10 ">
+        <ul className="dropdown-menu w-full flex flex-col ml-10 -mt-2 ">
             <li onClick={() => handleItemClick('News')}>News</li>
             <li onClick={() => handleItemClick('Sports')}>Sports</li>
             <li onClick={() => handleItemClick('Business')} >Business</li>

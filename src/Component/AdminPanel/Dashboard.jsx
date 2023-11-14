@@ -146,7 +146,7 @@ function Dashboard  ()  {
               </div>
               <p className="mb-2  font-bold">Categories</p>
               <h6 className="text-3xl font-bold text-deep-purple-accent-400">
-            144K
+            4
           </h6>
             </div>
           </div>
