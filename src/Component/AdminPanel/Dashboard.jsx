@@ -14,7 +14,6 @@ function Dashboard  ()  {
         const response = await fetch('https://mmust-jowa.onrender.com/api/v1/admin/news/latest', {
           method: 'GET',
           headers: {
-            mode: 'cors',
             'Content-Type': 'application/json',
             'Authorization': `Bearer ` + localStorage.getItem('accessToken'),
           },
@@ -31,7 +30,6 @@ function Dashboard  ()  {
         const commentsResponse = await fetch('https://mmust-jowa.onrender.com/api/v1/admin/total/comments', {
           method: 'GET',
           headers: {
-            mode: 'cors',
             'Content-Type': 'application/json',
             'Authorization': `Bearer ` + localStorage.getItem('accessToken'),
           },
@@ -42,12 +40,12 @@ function Dashboard  ()  {
         }
 
         const totalComments = await commentsResponse.json();
+        console.log(totalComments)
         setTotalComments(totalComments);
 
         const blogsResponse = await fetch('https://mmust-jowa.onrender.com/api/v1/admin/total/blogs', {
           method: 'GET',
           headers: {
-            mode: 'cors',
             'Content-Type': 'application/json',
             'Authorization': `Bearer ` + localStorage.getItem('accessToken'),
           },
@@ -78,10 +76,10 @@ function Dashboard  ()  {
   return (
     <>
     {/* statistics */}
-      <div className=" grid gap-10 col-span-3 items-center sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-10 col-span-3 items-center sm:grid-cols-2 lg:grid-cols-3">
           
-          <div className="grid  justify-between overflow-hidden  text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
-            <div className="p-5">
+          <div className="w-full  grid  justify-between overflow-hidden  text-center transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl items-center">
+            <div className="p-5  w-full">
               <div className="flex items-center justify-center w-10 h-10 mb-4 rounded-full bg-indigo-50">
                 <svg
                   className="w-8 h-8 text-deep-purple-accent-400"
@@ -152,27 +150,29 @@ function Dashboard  ()  {
           </div>
         </div>
       {/* latest post  */}
-      <div className='  col-span-3 shadow-md bg-white    py-2.5 '>
+      <div className='  col-span-3 shadow-md     py-2.5 '>
         <ul className='hidden lg:grid shadow-md bg-white  border-solid ml-2 py-2.5 px-2 grid-cols-4 gap-10'>
           <li>IMAGE</li>
           <li>HEADLINE</li>
           <ul className='hidden lg:flex gap-24 justify-between ml-4 '>
-          <li>DATE</li>
+          {/* <li>DATE</li> */}
           <li className='ml-12' >COMMENTS</li>
-          <li>VIEWS</li>
+          <li className='ml-[100px]'>VIEWS</li>
           </ul>
         </ul> 
          </div>
 
-        <div className='relative col-span-3  lg:py-0.5 py-2.5'>
+        <div className='relative col-span-3  lg:py-0.5 py-2.5 z-[4]'>
   
         {latestNews.map((item,) => (
+          // console.log(item.id),
           <AdminBlogs
             key={item.id}
             title={item.title}
             total_comments={item.total_comments}
             published_on={formatToLocalTime(item.published_on)}
             image={item.image_id}
+            id={item.id}
           />
         ))}
         
